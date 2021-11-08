@@ -123,7 +123,7 @@ RUN mkdir /home/${user}/${github} -p;\
     mkdir -p ~/.jupyter/nbconfig;\
     echo ${JUCELL} > ~/.jupyter/nbconfig/notebook.json        
  
-ADD id_rsa_mac_1080ti.pub /home/${user}/.ssh/authorized_keys
+ADD id_rsa*.pub /home/${user}/.ssh/authorized_keys
 
 ENTRYPOINT sudo service ssh restart && zsh
                     
